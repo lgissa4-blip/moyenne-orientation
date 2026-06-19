@@ -1,4 +1,4 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
     margin: 0;
     padding: 0;
@@ -7,27 +7,31 @@
 
 body {
     font-family: 'Segoe UI', system-ui, sans-serif;
-    background: linear-gradient(135deg, #f3f6fb, #eafaf1);
+    background: linear-gradient(135deg, #eefbf4, #f3f6fb);
     color: #1e293b;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     background: linear-gradient(90deg, #009e60, #00c97b);
     padding: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .haut {
+    max-width: 1100px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
-    margin: auto;
 }
 
 .logo {
     width: 70px;
+}
+
+.header-text {
+    text-align: center;
 }
 
 .header-text h1 {
@@ -40,7 +44,7 @@ header {
     color: #eafff5;
 }
 
-/* PROFIL */
+/* ================= PROFIL ================= */
 .profil-header {
     display: flex;
     align-items: center;
@@ -60,26 +64,26 @@ header {
     font-weight: bold;
 }
 
-/* MAIN */
+/* ================= MAIN ================= */
 main {
     max-width: 1100px;
     margin: auto;
     padding: 20px;
 }
 
-/* TITRES */
+/* ================= TITRES ================= */
 h2 {
     margin: 20px 0 10px;
     border-left: 5px solid #009e60;
     padding-left: 10px;
 }
 
-/* FORMULAIRE */
+/* ================= FORM ================= */
 .boite {
     background: white;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
 .champ {
@@ -88,15 +92,16 @@ h2 {
 
 .champ label {
     font-weight: bold;
-    display: block;
     margin-bottom: 5px;
+    display: block;
 }
 
-.champ-input, select {
+.champ-input {
     width: 100%;
     padding: 12px;
     border-radius: 30px;
     border: 1px solid #ccc;
+    transition: 0.3s;
 }
 
 .champ-input:focus {
@@ -104,13 +109,13 @@ h2 {
     outline: none;
 }
 
-/* TABLE */
+/* ================= TABLE ================= */
 .table-container {
     margin-top: 15px;
     overflow-x: auto;
     background: white;
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
 table {
@@ -125,8 +130,8 @@ th {
 }
 
 td {
-    text-align: center;
     padding: 10px;
+    text-align: center;
 }
 
 td:first-child {
@@ -141,100 +146,95 @@ tr:nth-child(even) {
 /* INPUT TABLE */
 table input {
     width: 70px;
-    padding: 5px;
+    padding: 6px;
     border-radius: 8px;
     border: 1px solid #ccc;
     text-align: center;
 }
 
-/* RESULTATS */
-.resultats {
-    background: white;
+/* ================= RESULTAT ================= */
+h3 {
     margin-top: 20px;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    font-size: 18px;
 }
 
-/* BOUTONS */
-.groupe-boutons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.bouton {
-    flex: 1;
+/* ================= BOUTON ================= */
+button {
+    margin-top: 15px;
     padding: 12px;
-    border-radius: 12px;
+    width: 100%;
     border: none;
+    border-radius: 12px;
+    background: #009e60;
     color: white;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
-.bouton:hover {
+button:hover {
     transform: scale(1.05);
 }
 
-.bouton-primaire {
-    background: #009e60;
+/* ================= POPUP PUB ================= */
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
 
-.bouton-secondaire {
-    background: #64748b;
-}
-
-.bouton-imprimer {
-    background: #f59e0b;
-}
-
-/* PUBLICITES */
-.publicites {
-    max-width: 1100px;
-    margin: 20px auto;
-}
-
-.pub-card {
+.popup-content {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    width: 90%;
+    max-width: 350px;
     text-align: center;
+    animation: fadeIn 0.4s ease;
 }
 
-.pub-tag {
-    background: #009e60;
-    color: white;
-    font-size: 10px;
-    padding: 4px 8px;
-    border-radius: 20px;
-    display: inline-block;
+.popup-title {
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* FIREWORK */
-.fireworks {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 18px;
 }
 
-/* MOBILE */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
 
     .haut {
         flex-direction: column;
-        text-align: center;
         gap: 10px;
-    }
-
-    .groupe-boutons {
-        flex-direction: column;
+        text-align: center;
     }
 
     table input {
         width: 50px;
+    }
+
+    button {
+        font-size: 14px;
     }
 }
