@@ -3,34 +3,25 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Responsive mobile parfait -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316"
-     crossorigin="anonymous"></script>
-<!-- responsive -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1014785724497316"
-     data-ad-slot="9937918976"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+    <!-- Responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- App mobile -->
+    <!-- Adsense (UNE SEULE FOIS) -->
+    <script async 
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#009e60">
 
-    <!-- Adsense -->
+    <!-- Adsense meta -->
     <meta name="google-adsense-account" content="ca-pub-1014785724497316">
 
     <title>Orientation BEPC</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-
-    <!-- Icon -->
     <link rel="icon" href="images/3eme.png">
 </head>
 
@@ -38,239 +29,136 @@
 
 <header>
     <div class="haut">
+        <img src="images/images.png" class="logo">
 
-        <img src="images/images.png" class="logo" alt="Logo">
-
-        <div class="header-text">
+        <div>
             <h1>Moyenne d'Orientation - BEPC</h1>
-            <p class="subtitle">Calculateur simple, mobile et facile à utiliser</p>
+            <p>Calculateur simple et rapide</p>
         </div>
-
-        <div class="profil-header">
-            <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil" alt="photo">
-            <span id="header_nom" class="profil-nom">L'BOSS ISSA</span>
-        </div>
-
     </div>
 </header>
 
-<main class="contenu">
+<!-- PUB 1 (EN HAUT) -->
+<div style="margin:20px;">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-1014785724497316"
+        data-ad-slot="9937918976"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+</div>
 
-    <!-- FORMULAIRE -->
-    <section class="formulaire">
-        <div class="boite">
+<main>
 
-            <h2>Niveau et Série</h2>
+    <h2>Calcul de la moyenne</h2>
 
-            <div class="champ">
-                <label for="prenom">Prénom</label>
-                <input id="prenom" class="champ-input" type="text" placeholder="Prénom">
-            </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Matière</th>
+                <th>T1</th>
+                <th>T2</th>
+                <th>T3</th>
+                <th>Moyenne</th>
+                <th>BEPC</th>
+                <th>Coef</th>
+            </tr>
+        </thead>
 
-            <div class="champ">
-                <label for="nom">Nom</label>
-                <input id="nom" class="champ-input" type="text" placeholder="Nom">
-            </div>
+        <tbody>
 
-            <div class="champ">
-                <label for="niveau">Niveau scolaire</label>
-                <select id="niveau">
-                    <option value="3eme">3ème (Brevet)</option>
-                </select>
-            </div>
+            <tr>
+                <td>Français</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td></td>
+                <td><input type="number"></td>
+                <td>2</td>
+            </tr>
 
-        </div>
-    </section>
+            <tr>
+                <td>Maths</td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td></td>
+                <td><input type="number"></td>
+                <td>2</td>
+            </tr>
 
-    <h2>Tableau de calcul - Moyenne d'Orientation BEPC</h2>
+        </tbody>
+    </table>
 
-    <!-- TABLE -->
-    <div class="table-container">
-        <table>
+    <br>
 
-            <thead>
-                <tr>
-                    <th>Matière</th>
-                    <th>Trimestre 1</th>
-                    <th>Trimestre 2</th>
-                    <th>Trimestre 3</th>
-                    <th>Moyenne</th>
-                    <th>BEPC</th>
-                    <th>Combinaison</th>
-                    <th>Moyenne orientation</th>
-                    <th>Coef</th>
-                    <th>Note coef</th>
-                </tr>
-            </thead>
+    <button id="calculer">Calculer</button>
 
-            <tbody>
-
-                <tr>
-                    <td>Composition française</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
-                    <td><span>2</span></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>Mathématiques</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
-                    <td><span>2</span></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>Physique - Chimie</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
-                    <td><span>1</span></td>
-                    <td></td>
-                </tr>
-
-                <tr>
-                    <td>Anglais</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-
-                    <td>
-                        <div>
-                            Écrit <input type="number" min="0" max="20">
-                        </div>
-                        <div>
-                            Oral <input type="number" min="0" max="20">
-                        </div>
-                    </td>
-
-                    <td></td>
-                    <td></td>
-                    <td><span>1</span></td>
-                    <td></td>
-                </tr>
-
-                <tr class="ligne-total">
-                    <td colspan="7">Moyenne d'orientation obtenue</td>
-                    <td id="moyenne_finale_table">0.00</td>
-                    <td colspan="2"></td>
-                </tr>
-
-            </tbody>
-        </table>
-    </div>
-
-    <!-- RESULTATS -->
-    <div class="resultats">
-        <p>Nom élève : <span id="nom_eleve">—</span></p>
-        <p>Niveau : <span id="niveau_eleve">—</span></p>
-        <p>Total des points : <span id="total_points">0.00</span></p>
-        <p>Moyenne d'orientation : <span id="mo_value">0.00</span></p>
-    </div>
-
-    <!-- BOUTONS -->
-    <section class="section-boutons">
-        <div class="groupe-boutons">
-            <button id="calculer" class="bouton bouton-primaire">Calculer</button>
-            <button id="effacer" class="bouton bouton-secondaire">Effacer</button>
-            <button id="imprimer" class="bouton bouton-imprimer">Imprimer</button>
-        </div>
-    </section>
+    <h3>Moyenne : <span id="resultat">0</span></h3>
 
 </main>
 
-<!-- FEUX -->
-<div id="fireworks" class="fireworks"></div>
+<!-- PUB 2 (MILIEU ARTICLE) -->
+<div style="margin:30px;">
+    <ins class="adsbygoogle"
+        style="display:block; text-align:center;"
+        data-ad-layout="in-article"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-1014785724497316"
+        data-ad-slot="1116892695"></ins>
+</div>
 
-<!-- JS PRINCIPAL -->
+<!-- PUB 3 (BAS PAGE) -->
+<div style="margin:20px;">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="fluid"
+        data-ad-client="ca-pub-1014785724497316"
+        data-ad-slot="2054303911"></ins>
+</div>
+
+<!-- Activation des pubs -->
 <script>
-(function(){
-    const table = document.querySelector('table');
-    const tbody = table.querySelector('tbody');
-
-    function enNombre(v){
-        const n = parseFloat(v);
-        return isNaN(n) ? 0 : Math.max(0, Math.min(20, n));
-    }
-
-    function moyenne(tab){
-        let total = 0, count = 0;
-        tab.forEach(v => {
-            if (!isNaN(v)){
-                total += v;
-                count++;
-            }
-        });
-        return count ? total / count : 0;
-    }
-
-    document.getElementById('calculer').onclick = () => {
-
-        let total = 0;
-        let coefTotal = 0;
-
-        tbody.querySelectorAll('tr:not(.ligne-total)').forEach(ligne => {
-
-            const inputs = ligne.querySelectorAll('input');
-
-            const t1 = enNombre(inputs[0]?.value);
-            const t2 = enNombre(inputs[1]?.value);
-            const t3 = enNombre(inputs[2]?.value);
-
-            const moy = moyenne([t1, t2, t3]);
-
-            let bepc = 0;
-
-            if (ligne.cells[5].querySelectorAll('input').length === 2){
-                const e = enNombre(ligne.cells[5].querySelectorAll('input')[0].value);
-                const o = enNombre(ligne.cells[5].querySelectorAll('input')[1].value);
-                bepc = moyenne([e, o]);
-            } else {
-                bepc = enNombre(inputs[3]?.value);
-            }
-
-            const combine = (moy + bepc) / 2;
-            const coef = parseFloat(ligne.cells[8].textContent);
-            const note = combine * coef;
-
-            ligne.cells[4].textContent = moy.toFixed(2);
-            ligne.cells[6].textContent = combine.toFixed(2);
-            ligne.cells[7].textContent = combine.toFixed(2);
-            ligne.cells[9].textContent = note.toFixed(2);
-
-            total += note;
-            coefTotal += coef;
-        });
-
-        const final = total / coefTotal;
-
-        document.getElementById('total_points').textContent = total.toFixed(2);
-        document.getElementById('mo_value').textContent = final.toFixed(2);
-        document.getElementById('moyenne_finale_table').textContent = final.toFixed(2);
-    };
-
-})();
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
-<!-- Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316"
-crossorigin="anonymous"></script>
+<!-- JS CALCUL -->
+<script>
+document.getElementById("calculer").onclick = function(){
+
+    let lignes = document.querySelectorAll("tbody tr");
+    let total = 0;
+    let coefTotal = 0;
+
+    lignes.forEach(ligne => {
+
+        let inputs = ligne.querySelectorAll("input");
+
+        let t1 = parseFloat(inputs[0].value) || 0;
+        let t2 = parseFloat(inputs[1].value) || 0;
+        let t3 = parseFloat(inputs[2].value) || 0;
+
+        let moyenne = (t1 + t2 + t3) / 3;
+
+        let bepc = parseFloat(inputs[3].value) || 0;
+
+        let coef = parseFloat(ligne.cells[6].textContent);
+
+        let note = ((moyenne + bepc)/2) * coef;
+
+        total += note;
+        coefTotal += coef;
+
+        ligne.cells[4].textContent = moyenne.toFixed(2);
+    });
+
+    let final = total / coefTotal;
+
+    document.getElementById("resultat").textContent = final.toFixed(2);
+}
+</script>
 
 </body>
 </html>
