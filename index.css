@@ -3,72 +3,60 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
 }
 
-/* BODY */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f3f6fb;
-    color: #1f2937;
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-}
-
-/* EMPÊCHE ZOOM IPHONE */
-input, select {
-    font-size: 16px !important;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: linear-gradient(135deg, #f3f6fb, #eafaf1);
+    color: #1e293b;
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(90deg, #009e60, #ffffff, #0f172a);
+    background: linear-gradient(90deg, #009e60, #00c97b);
     padding: 15px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .haut {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     max-width: 1100px;
     margin: auto;
-    gap: 10px;
-    flex-wrap: wrap;
 }
 
 .logo {
-    width: 80px;
-}
-
-.header-text {
-    flex: 1;
-    text-align: center;
+    width: 70px;
 }
 
 .header-text h1 {
-    font-size: 22px;
+    font-size: 20px;
+    color: white;
 }
 
 .subtitle {
-    font-size: 14px;
+    font-size: 13px;
+    color: #eafff5;
 }
 
+/* PROFIL */
 .profil-header {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
 }
 
 .photo-profil {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
 }
 
 .profil-nom {
+    color: white;
     font-weight: bold;
 }
 
@@ -76,20 +64,26 @@ header {
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 15px;
+    padding: 20px;
 }
 
-/* BOITE */
+/* TITRES */
+h2 {
+    margin: 20px 0 10px;
+    border-left: 5px solid #009e60;
+    padding-left: 10px;
+}
+
+/* FORMULAIRE */
 .boite {
     background: white;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-/* INPUT */
 .champ {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .champ label {
@@ -100,72 +94,88 @@ main {
 
 .champ-input, select {
     width: 100%;
-    padding: 10px;
-    border-radius: 25px;
+    padding: 12px;
+    border-radius: 30px;
     border: 1px solid #ccc;
+}
+
+.champ-input:focus {
+    border-color: #009e60;
+    outline: none;
 }
 
 /* TABLE */
 .table-container {
+    margin-top: 15px;
     overflow-x: auto;
     background: white;
-    border-radius: 12px;
-    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 table {
     width: 100%;
-    min-width: 700px;
     border-collapse: collapse;
-}
-
-th, td {
-    padding: 8px;
-    border: 1px solid #ddd;
-    text-align: center;
-    font-size: 14px;
 }
 
 th {
     background: #0f172a;
     color: white;
+    padding: 10px;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
 }
 
 td:first-child {
     text-align: left;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background: #f8fafc;
 }
 
 /* INPUT TABLE */
 table input {
-    width: 100%;
+    width: 70px;
     padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     text-align: center;
 }
 
 /* RESULTATS */
 .resultats {
     background: white;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
 /* BOUTONS */
 .groupe-boutons {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
-    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .bouton {
     flex: 1;
     padding: 12px;
+    border-radius: 12px;
     border: none;
-    border-radius: 10px;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    transform: scale(1.05);
 }
 
 .bouton-primaire {
@@ -173,88 +183,58 @@ table input {
 }
 
 .bouton-secondaire {
-    background: #475569;
+    background: #64748b;
 }
 
 .bouton-imprimer {
     background: #f59e0b;
 }
 
-/* HOVER PC */
-.bouton:hover {
-    transform: translateY(-2px);
+/* PUBLICITES */
+.publicites {
+    max-width: 1100px;
+    margin: 20px auto;
 }
 
-/* 🔥 RESPONSIVE TABLET */
+.pub-card {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.pub-tag {
+    background: #009e60;
+    color: white;
+    font-size: 10px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* FIREWORK */
+.fireworks {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* MOBILE */
 @media (max-width: 768px) {
 
     .haut {
         flex-direction: column;
         text-align: center;
-    }
-
-    .profil-header {
-        justify-content: center;
-    }
-
-    .logo {
-        width: 60px;
-    }
-
-    .photo-profil {
-        width: 50px;
-        height: 50px;
-    }
-
-    .header-text h1 {
-        font-size: 18px;
-    }
-
-    table {
-        min-width: 650px;
+        gap: 10px;
     }
 
     .groupe-boutons {
         flex-direction: column;
     }
 
-    .bouton {
-        width: 100%;
-    }
-}
-
-/* 🔥 MOBILE */
-@media (max-width: 480px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    .header-text h1 {
-        font-size: 16px;
-    }
-
-    .subtitle {
-        font-size: 12px;
-    }
-
-    table {
-        min-width: 600px;
-    }
-
-    th, td {
-        font-size: 12px;
-        padding: 6px;
-    }
-
     table input {
-        font-size: 12px;
-    }
-}
-
-/* 🔥 PETIT MOBILE */
-@media (max-width: 360px) {
-    table {
-        min-width: 550px;
+        width: 50px;
     }
 }
