@@ -7,55 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Calculateur de moyenne d'orientation BEPC en Côte d'Ivoire. Simple, rapide et gratuit.">
-    <meta name="keywords" content="BEPC, orientation, moyenne, calculateur, Côte d'Ivoire">
-    <meta name="author" content="Issa Pacha">
-
-    <!-- OPEN GRAPH (partage WhatsApp / Facebook) -->
-    <meta property="og:title" content="Calculateur BEPC">
-    <meta property="og:description" content="Calcule ta moyenne d'orientation facilement">
-    <meta property="og:image" content="images/3eme.png">
+    <meta name="description" content="Calculateur BEPC Côte d'Ivoire">
 
     <!-- ADSENSE -->
     <script async 
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316"
         crossorigin="anonymous"></script>
 
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#009e60">
-
-    <title>Calculateur BEPC | Moyenne Orientation</title>
+    <title>Calculateur BEPC</title>
 
     <link rel="stylesheet" href="index.css">
-    <link rel="icon" href="images/3eme.png">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-    <div class="haut">
+<!-- ================= POPUP PUB ================= -->
+<div id="popupPub" class="popup-overlay">
+    <div class="popup-content">
 
-        <img src="images/images.png" class="logo" alt="Logo BEPC">
+        <span class="popup-close" onclick="fermerPub()">✖</span>
 
-        <div class="header-text">
-            <h1>Moyenne d'Orientation - BEPC</h1>
-            <p class="subtitle">Calcul rapide, précis et professionnel</p>
-        </div>
-
-        <div class="profil-header">
-            <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil" alt="Profil">
-            <span id="header_nom" class="profil-nom">L'BOSS ISSA</span>
-        </div>
-
-    </div>
-</header>
-
-<!-- ================= PUB HAUT ================= -->
-<section class="publicites">
-    <div class="pub-card">
-        <span class="pub-tag">Sponsorisé</span>
+        <p class="popup-title">Annonce sponsorisée</p>
 
         <ins class="adsbygoogle"
             style="display:block"
@@ -63,42 +35,51 @@
             data-ad-slot="9937918976"
             data-ad-format="auto"
             data-full-width-responsive="true"></ins>
+
     </div>
-</section>
+</div>
 
-<main class="contenu">
+<!-- ================= HEADER ================= -->
+<header>
+    <div class="haut">
 
-    <!-- ================= FORM ================= -->
-    <section class="formulaire">
-        <div class="boite">
+        <img src="images/images.png" class="logo">
 
-            <h2>Informations élève</h2>
-
-            <div class="champ">
-                <label for="prenom">Prénom</label>
-                <input id="prenom" class="champ-input" type="text" placeholder="Ex: Issa">
-            </div>
-
-            <div class="champ">
-                <label for="nom">Nom</label>
-                <input id="nom" class="champ-input" type="text" placeholder="Ex: Pacha">
-            </div>
-
-            <div class="champ">
-                <label for="niveau">Niveau</label>
-                <select id="niveau">
-                    <option value="3eme">3ème (BEPC)</option>
-                </select>
-            </div>
-
+        <div class="header-text">
+            <h1>Moyenne d'Orientation - BEPC</h1>
+            <p class="subtitle">Calcul rapide et fiable</p>
         </div>
-    </section>
 
-    <!-- ================= TABLE ================= -->
-    <h2>Calcul de la moyenne</h2>
+        <div class="profil-header">
+            <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil">
+            <span class="profil-nom">L'BOSS ISSA</span>
+        </div>
+
+    </div>
+</header>
+
+<main>
+
+    <h2>Informations</h2>
+
+    <div class="boite">
+
+        <div class="champ">
+            <label>Prénom</label>
+            <input id="prenom" class="champ-input">
+        </div>
+
+        <div class="champ">
+            <label>Nom</label>
+            <input id="nom" class="champ-input">
+        </div>
+
+    </div>
+
+    <h2>Calcul</h2>
 
     <div class="table-container">
-        <table aria-label="Calcul moyenne BEPC">
+        <table>
 
             <thead>
                 <tr>
@@ -106,102 +87,91 @@
                     <th>T1</th>
                     <th>T2</th>
                     <th>T3</th>
-                    <th>Moyenne</th>
+                    <th>Moy</th>
                     <th>BEPC</th>
-                    <th>Combinaison</th>
-                    <th>Moyenne orientation</th>
                     <th>Coef</th>
-                    <th>Points</th>
                 </tr>
             </thead>
 
             <tbody>
-                <!-- Exemple ligne -->
+
                 <tr>
-                    <td>Mathématiques</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
+                    <td>Français</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
                     <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
-                    <td><span>2</span></td>
-                    <td></td>
+                    <td><input type="number"></td>
+                    <td>2</td>
                 </tr>
+
+                <tr>
+                    <td>Maths</td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                    <td></td>
+                    <td><input type="number"></td>
+                    <td>2</td>
+                </tr>
+
             </tbody>
 
         </table>
     </div>
 
-    <!-- ================= PUB MILIEU ================= -->
-    <section class="publicites">
-        <div class="pub-card">
+    <button onclick="calculer()">Calculer</button>
 
-            <span class="pub-tag">Publicité</span>
-
-            <ins class="adsbygoogle"
-                style="display:block; text-align:center;"
-                data-ad-format="fluid"
-                data-ad-layout="in-article"
-                data-ad-client="ca-pub-1014785724497316"
-                data-ad-slot="1116892695"></ins>
-
-        </div>
-    </section>
-
-    <!-- ================= RESULTATS ================= -->
-    <section class="resultats">
-        <p>Nom : <span id="nom_eleve">—</span></p>
-        <p>Niveau : <span id="niveau_eleve">—</span></p>
-        <p>Total points : <span id="total_points">0.00</span></p>
-        <p>Moyenne : <span id="mo_value">0.00</span></p>
-    </section>
-
-    <!-- ================= BOUTONS ================= -->
-    <section class="section-boutons">
-        <div class="groupe-boutons">
-
-            <button id="calculer" class="bouton bouton-primaire">
-                Calculer
-            </button>
-
-            <button id="effacer" class="bouton bouton-secondaire">
-                Effacer
-            </button>
-
-            <button id="imprimer" class="bouton bouton-imprimer">
-                Imprimer
-            </button>
-
-        </div>
-    </section>
+    <h3>Moyenne : <span id="resultat">0</span></h3>
 
 </main>
 
-<!-- ================= PUB BAS ================= -->
-<section class="publicites">
-    <div class="pub-card">
-
-        <span class="pub-tag">Annonce</span>
-
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-1014785724497316"
-            data-ad-slot="2054303911"
-            data-ad-format="fluid"></ins>
-
-    </div>
-</section>
-
-<!-- FIREWORK -->
-<div id="fireworks" class="fireworks"></div>
-
-<!-- ADSENSE INIT -->
+<!-- ================= SCRIPT ================= -->
 <script>
+
+// PUB
+window.onload = function() {
     (adsbygoogle = window.adsbygoogle || []).push({});
-    (adsbygoogle = window.adsbygoogle || []).push({});
-    (adsbygoogle = window.adsbygoogle || []).push({});
+}
+
+function fermerPub(){
+    document.getElementById("popupPub").style.display = "none";
+}
+
+// CALCUL
+function calculer(){
+
+    let lignes = document.querySelectorAll("tbody tr");
+    let total = 0;
+    let coefTotal = 0;
+
+    lignes.forEach(ligne => {
+
+        let inputs = ligne.querySelectorAll("input");
+
+        let t1 = parseFloat(inputs[0].value) || 0;
+        let t2 = parseFloat(inputs[1].value) || 0;
+        let t3 = parseFloat(inputs[2].value) || 0;
+
+        let moyenne = (t1 + t2 + t3) / 3;
+
+        let bepc = parseFloat(inputs[3].value) || 0;
+
+        let coef = parseFloat(ligne.cells[6].textContent);
+
+        let note = ((moyenne + bepc)/2) * coef;
+
+        total += note;
+        coefTotal += coef;
+
+        ligne.cells[4].textContent = moyenne.toFixed(2);
+    });
+
+    let final = total / coefTotal;
+
+    document.getElementById("resultat").textContent = final.toFixed(2);
+}
+
 </script>
 
 </body>
