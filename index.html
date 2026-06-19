@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientation BEPC</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/3eme.png">
+</head>
+<body>
+    <header>
+        <div class="haut">
+            <img src="images/images.png" class="logo" alt="Logo">
+            <div class="header-text">
+                <h1>Moyenne d'Orientation - BEPC</h1>
+                <p class="subtitle">Calculateur simple, mobile et facile à utiliser</p>
+            </div>
+            <div class="profil-header">
+                <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil" alt="ma photo">
+                <span id="header_nom" class="profil-nom">L'BOSS ISSA</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenu">
+        <section class="formulaire">
+            <div class="boite">
+                <h2>Niveau et Série</h2>
+                <div class="champ">
+                    <label for="prenom">Prénom</label>
+                    <input id="prenom" class="champ-input" type="text" placeholder="Prénom">
+                </div>
+                <div class="champ">
+                    <label for="nom">Nom</label>
+                    <input id="nom" class="champ-input" type="text" placeholder="Nom">
+                </div>
+                <div class="champ">
+                    <label for="niveau">Niveau scolaire</label>
+                    <select id="niveau">
+                        <option value="3eme">3ème (Brevet)</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <h2>Tableau de calcul - Moyenne d'Orientation BEPC</h2>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Matière</th>
+                        <th>Trimestre 1</th>
+                        <th>Trimestre 2</th>
+                        <th>Trimestre 3</th>
+                        <th>Moyenne</th>
+                        <th>BEPC</th>
+                        <th>Combinaison</th>
+                        <th>Moyenne orientation</th>
+                        <th>Coef</th>
+                        <th>Note coef</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Composition française</td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td></td>
+                        <td><span>2</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mathématiques</td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td></td>
+                        <td><span>2</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Physique - Chimie</td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td></td>
+                        <td><span>1</span></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Anglais</td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td><input type="number" min="0" max="20" step="0.10" placeholder="0"></td>
+                        <td></td>
+                        <td>
+                            <div>Écrit <input type="number" min="0" max="20" step="0.10" placeholder="0"></div>
+                            <div>Oral <input type="number" min="0" max="20" step="0.10" placeholder="0"></div>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td><span>1</span></td>
+                        <td></td>
+                    </tr>
+                    <tr class="ligne-total">
+                        <td colspan="7">Moyenne d'orientation obtenue</td>
+                        <td id="moyenne_finale_table" class="cell-moyenne-final">0.00</td>
+                        <td colspan="2"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="resultats">
+            <p>Nom élève : <span id="nom_eleve">—</span></p>
+            <p>Niveau : <span id="niveau_eleve">—</span></p>
+            <p>Total des points : <span id="total_points">0.00</span></p>
+            <p>Moyenne d'orientation : <span id="mo_value">0.00</span></p>
+        </div>
+
+        <section class="section-boutons">
+            <div class="groupe-boutons">
+                <button id="calculer" class="bouton bouton-primaire" type="button">Calculer</button>
+                <button id="effacer" class="bouton bouton-secondaire" type="button">Effacer</button>
+                <button id="imprimer" class="bouton bouton-imprimer" type="button">Imprimer</button>
+            </div>
+        </section>
+    </main>
+
+    <div id="fireworks" class="fireworks" aria-hidden="true"></div>
+
+        <script>
+            (function(){
+                // éléments (noms en français pour les débutants)
+                const table = document.querySelector('table');
+                const tbody = table.querySelector('tbody');
+                const totalPointsElement = document.getElementById('total_points');
+                const moElement = document.getElementById('mo_value');
+                const elementNom = document.getElementById('nom');
+                const elementPrenom = document.getElementById('prenom');
+                const elementNiveau = document.getElementById('niveau');
+                const elementNomEleve = document.getElementById('nom_eleve');
+                const elementNiveauAffiche = document.getElementById('niveau_eleve');
+                const elementHeaderNom = document.getElementById('header_nom');
+                const overlayFeux = document.getElementById('fireworks');
+
+                // Convertit et borne une valeur entre 0 et 20
+                function enNombre(valeur){
+                    const n = parseFloat(valeur);
+                    if (!Number.isFinite(n)) return null;
+                    if (n < 0) return 0;
+                    if (n > 20) return 20;
+                    return n;
+                }
+
+                function getLignes(){
+                    return tbody.querySelectorAll('tr:not(.ligne-total)');
+                }
+
+                function getNombreValides(liste){
+                    return liste.filter(v => Number.isFinite(v) && v !== null && v !== undefined);
+                }
+
+                function calculerMoyenne(values){
+                    const valides = getNombreValides(values);
+                    if (valides.length === 0) return 0;
+                    const total = valides.reduce((a, b) => a + b, 0);
+                    return total / valides.length;
+                }
+
+                function validerTout(){
+                    if (!elementPrenom.value.trim() || !elementNom.value.trim()){
+                        alert('Veuillez entrer le prénom et le nom.');
+                        return false;
+                    }
+                    const entrees = table.querySelectorAll('input[type="number"]');
+                    for (const e of entrees){
+                        if (e.value === '') continue;
+                        const v = parseFloat(e.value);
+                        if (!Number.isFinite(v) || v < 0 || v > 20){
+                            alert('Chaque note doit être entre 0 et 20.');
+                            e.focus();
+                            return false;
+                        }
+                    }
+                    return true;
+                }
+
+                function calculerLigne(ligne){
+                    const inputs = ligne.querySelectorAll('input');
+                    const t1 = enNombre(inputs[0]?.value);
+                    const t2 = enNombre(inputs[1]?.value);
+                    const t3 = enNombre(inputs[2]?.value);
+                    const moyenne = calculerMoyenne([t1, t2, t3]);
+                    let bepc = 0;
+                    const coefCell = ligne.cells[8];
+                    const coefInput = coefCell.querySelector('select, span');
+                    const coef = coefInput && coefInput.tagName === 'SELECT'
+                        ? parseFloat(coefInput.value || 1)
+                        : parseFloat(coefCell.textContent || 1);
+
+                    if (ligne.cells[5].querySelector('div')){
+                        const ecrit = enNombre(ligne.cells[5].querySelectorAll('input')[0]?.value);
+                        const oral = enNombre(ligne.cells[5].querySelectorAll('input')[1]?.value);
+                        bepc = calculerMoyenne([ecrit, oral]);
+                    } else {
+                        bepc = enNombre(inputs[3]?.value);
+                    }
+                    const combinee = bepc > 0 ? (moyenne + bepc) / 2 : moyenne;
+                    const noteCoef = combinee * coef;
+                    ligne.cells[4].textContent = moyenne.toFixed(2);
+                    ligne.cells[6].textContent = combinee.toFixed(2);
+                    ligne.cells[7].textContent = combinee.toFixed(2);
+                    ligne.cells[9].textContent = noteCoef.toFixed(2);
+                    return noteCoef;
+                }
+
+                function lancerFeuxArtifice(){
+                    overlayFeux.innerHTML = '';
+                    overlayFeux.classList.remove('active');
+                    void overlayFeux.offsetWidth;
+                    overlayFeux.classList.add('active');
+
+                    const couleurs = ['#ff4d4d', '#ffd166', '#4ade80', '#38bdf8', '#c084fc', '#fff', '#f472b6'];
+                    const sequences = [
+                        { x: 25, y: 18 },
+                        { x: 75, y: 18 },
+                        { x: 50, y: 32 },
+                        { x: 20, y: 60 },
+                        { x: 80, y: 60 },
+                        { x: 50, y: 75 }
+                    ];
+
+                    // 3 séries d'explosions, chacune longue et couvrante
+                    for (let serie = 0; serie < 3; serie++){
+                        setTimeout(() => {
+                            sequences.forEach((pos, index) => {
+                                setTimeout(() => {
+                                    for (let i = 0; i < 140; i++){
+                                        const particule = document.createElement('span');
+                                        particule.className = 'feu feu-gigantesque';
+                                        const angle = (Math.PI * 2 * i) / 140;
+                                        const rayon = 40 + Math.random() * 160;
+                                        const x = Math.cos(angle) * rayon;
+                                        const y = Math.sin(angle) * rayon;
+                                        particule.style.setProperty('--x', `${x}px`);
+                                        particule.style.setProperty('--y', `${y}px`);
+                                        particule.style.setProperty('--delay', `${Math.random() * 0.1}s`);
+                                        particule.style.setProperty('--dur', `${1.4 + Math.random() * 0.8}s`);
+                                        particule.style.background = couleurs[Math.floor(Math.random() * couleurs.length)];
+                                        particule.style.left = `${pos.x}%`;
+                                        particule.style.top = `${pos.y}%`;
+                                        overlayFeux.appendChild(particule);
+                                    }
+                                }, index * 220);
+                            });
+                        }, serie * 9500);
+                    }
+
+                    clearTimeout(lancerFeuxArtifice.timeoutId);
+                    lancerFeuxArtifice.timeoutId = setTimeout(() => {
+                        overlayFeux.classList.remove('active');
+                    }, 30000);
+                }
+
+                function calculerTout(){
+                    if (!validerTout()) return;
+                    const prenom = elementPrenom.value.trim();
+                    const nom = elementNom.value.trim();
+                    const nomComplet = prenom + ' ' + nom;
+                    elementNomEleve.textContent = nomComplet;
+                    elementNiveauAffiche.textContent = elementNiveau.value || '—';
+
+                    let totalPoints = 0;
+                    let totalCoef = 0;
+                    getLignes().forEach(ligne => {
+                        const coefCell = ligne.cells[8];
+                        const coefValue = coefCell.querySelector('select')
+                            ? parseFloat(coefCell.querySelector('select').value || 1)
+                            : parseFloat(coefCell.textContent || 1);
+                        const pts = calculerLigne(ligne);
+                        totalPoints += pts;
+                        totalCoef += coefValue;
+                    });
+                    const moyenneFinale = totalCoef ? (totalPoints / totalCoef) : 0;
+                    totalPointsElement.textContent = totalPoints.toFixed(2);
+                    moElement.textContent = moyenneFinale.toFixed(2);
+                    document.getElementById('moyenne_finale_table').textContent = moyenneFinale.toFixed(2);
+
+                    if (moyenneFinale >= 10) {
+                        lancerFeuxArtifice();
+                    } else {
+                        overlayFeux.classList.remove('active');
+                    }
+                }
+
+                function reinitialiserTout(){
+                    elementPrenom.value = '';
+                    elementNom.value = '';
+                    table.querySelectorAll('input').forEach(i => i.value = '');
+                    table.querySelectorAll('select').forEach(s => s.value = '1');
+                    getLignes().forEach(ligne => {
+                        ligne.cells[4].textContent = '';
+                        ligne.cells[6].textContent = '';
+                        ligne.cells[7].textContent = '';
+                        ligne.cells[9].textContent = '';
+                    });
+                    totalPointsElement.textContent = '0.00';
+                    moElement.textContent = '0.00';
+                    document.getElementById('moyenne_finale_table').textContent = '0.00';
+                    elementNomEleve.textContent = '—';
+                    elementNiveauAffiche.textContent = '—';
+                }
+
+                document.getElementById('calculer').addEventListener('click', calculerTout);
+                document.getElementById('effacer').addEventListener('click', reinitialiserTout);
+                document.getElementById('imprimer').addEventListener('click', function(){
+                    overlayFeux.classList.remove('active');
+                    overlayFeux.innerHTML = '';
+                    window.print();
+                });
+
+                window.addEventListener('beforeprint', function(){
+                    overlayFeux.classList.remove('active');
+                    overlayFeux.innerHTML = '';
+                });
+
+                window.addEventListener('afterprint', function(){
+                    overlayFeux.classList.remove('active');
+                    overlayFeux.innerHTML = '';
+                });
+            })();
+        </script>
