@@ -2,264 +2,238 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-
-    <!-- Responsive mobile parfait -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+    
     <!-- App mobile -->
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#009e60">
-
+    
     <!-- Adsense -->
     <meta name="google-adsense-account" content="ca-pub-1014785724497316">
-    google.com, pub-1014785724497316, DIRECT, f08c47fec0942fa0
-
-    <title>Orientation BEPC</title>
-
+    
+    <title>Orientation BEPC - Calculateur de Moyenne</title>
+    
     <!-- CSS -->
     <link rel="stylesheet" href="index.css">
-
+    
     <!-- Icon -->
     <link rel="icon" href="images/3eme.png">
 </head>
 
 <body>
 
+<!-- ANNONCE TOP RESPONSIVE AVEC FERMETURE -->
+<div id="ad-banner-top" class="ad-banner-top">
+    <button id="close-ad-top" class="ad-close-btn" aria-label="Fermer l'annonce">✕</button>
+    <div class="ad-content">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1014785724497316" data-ad-slot="1234567890" data-ad-format="horizontal"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+</div>
+
+<!-- HEADER -->
 <header>
     <div class="haut">
-
-        <img src="images/images.png" class="logo" alt="Logo">
-
+        <img src="images/images.png" class="logo" alt="Logo École">
+        
         <div class="header-text">
-            <h1>Moyenne d'Orientation - BEPC</h1>
-            <p class="subtitle">Calculateur simple, mobile et facile à utiliser</p>
+            <h1>Moyenne d'Orientation</h1>
+            <p class="subtitle">Calculateur BEPC Simple et Mobile</p>
         </div>
-
+        
         <div class="profil-header">
-            <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil" alt="photo">
+            <img src="images/MA_PHOTO-removebg-preview.png" class="photo-profil" alt="Profil">
             <span id="header_nom" class="profil-nom">L'BOSS ISSA</span>
         </div>
-
     </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <main class="contenu">
-
+    
     <!-- FORMULAIRE -->
     <section class="formulaire">
         <div class="boite">
-
-            <h2>Niveau et Série</h2>
-
+            <h2>👤 Niveau et Série</h2>
+            
             <div class="champ">
                 <label for="prenom">Prénom</label>
-                <input id="prenom" class="champ-input" type="text" placeholder="Prénom">
+                <input id="prenom" class="champ-input" type="text" placeholder="Votre prénom">
             </div>
-
+            
             <div class="champ">
                 <label for="nom">Nom</label>
-                <input id="nom" class="champ-input" type="text" placeholder="Nom">
+                <input id="nom" class="champ-input" type="text" placeholder="Votre nom">
             </div>
-
+            
             <div class="champ">
                 <label for="niveau">Niveau scolaire</label>
-                <select id="niveau">
+                <select id="niveau" class="champ-input">
                     <option value="3eme">3ème (Brevet)</option>
                 </select>
             </div>
-
         </div>
     </section>
 
-    <h2>Tableau de calcul - Moyenne d'Orientation BEPC</h2>
+    <!-- ANNONCE MILIEU PAGE -->
+    <div id="ad-banner-middle" class="ad-banner-middle">
+        <button id="close-ad-middle" class="ad-close-btn" aria-label="Fermer l'annonce">✕</button>
+        <div class="ad-content">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1014785724497316" data-ad-slot="0987654321" data-ad-format="horizontal"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- TITRE TABLE -->
+    <h2>📊 Tableau de Calcul - Moyenne d'Orientation BEPC</h2>
 
     <!-- TABLE -->
     <div class="table-container">
         <table>
-
             <thead>
                 <tr>
                     <th>Matière</th>
-                    <th>Trimestre 1</th>
-                    <th>Trimestre 2</th>
-                    <th>Trimestre 3</th>
+                    <th>T1</th>
+                    <th>T2</th>
+                    <th>T3</th>
                     <th>Moyenne</th>
                     <th>BEPC</th>
-                    <th>Combinaison</th>
-                    <th>Moyenne orientation</th>
+                    <th>Combi</th>
+                    <th>Orient</th>
                     <th>Coef</th>
-                    <th>Note coef</th>
+                    <th>Note</th>
                 </tr>
             </thead>
 
             <tbody>
-
+                <!-- Composition française -->
                 <tr>
-                    <td>Composition française</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
+                    <td class="matiere-name">Composition française</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td class="result-cell">0.00</td>
                     <td><span>2</span></td>
-                    <td></td>
+                    <td class="result-cell">0.00</td>
                 </tr>
 
+                <!-- Mathématiques -->
                 <tr>
-                    <td>Mathématiques</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
+                    <td class="matiere-name">Mathématiques</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td class="result-cell">0.00</td>
                     <td><span>2</span></td>
-                    <td></td>
+                    <td class="result-cell">0.00</td>
                 </tr>
 
+                <!-- Physique - Chimie -->
                 <tr>
-                    <td>Physique - Chimie</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-                    <td></td>
+                    <td class="matiere-name">Physique - Chimie</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
+                    <td class="result-cell">0.00</td>
                     <td><span>1</span></td>
-                    <td></td>
+                    <td class="result-cell">0.00</td>
                 </tr>
 
+                <!-- Anglais -->
                 <tr>
-                    <td>Anglais</td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td><input type="number" min="0" max="20"></td>
-                    <td></td>
-
+                    <td class="matiere-name">Anglais</td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td><input type="number" min="0" max="20" step="0.5"></td>
+                    <td class="result-cell">0.00</td>
                     <td>
-                        <div>
-                            Écrit <input type="number" min="0" max="20">
-                        </div>
-                        <div>
-                            Oral <input type="number" min="0" max="20">
+                        <div class="bepc-inputs">
+                            <input type="number" min="0" max="20" step="0.5" placeholder="E" title="Écrit">
+                            <input type="number" min="0" max="20" step="0.5" placeholder="O" title="Oral">
                         </div>
                     </td>
-
-                    <td></td>
-                    <td></td>
+                    <td class="result-cell">0.00</td>
+                    <td class="result-cell">0.00</td>
                     <td><span>1</span></td>
-                    <td></td>
+                    <td class="result-cell">0.00</td>
                 </tr>
 
+                <!-- Ligne Total -->
                 <tr class="ligne-total">
-                    <td colspan="7">Moyenne d'orientation obtenue</td>
-                    <td id="moyenne_finale_table">0.00</td>
+                    <td colspan="7">📈 Moyenne d'Orientation Obtenue</td>
+                    <td id="moyenne_finale_table" class="result-cell final-result">0.00</td>
                     <td colspan="2"></td>
                 </tr>
-
             </tbody>
         </table>
     </div>
 
-    <!-- RESULTATS -->
-    <div class="resultats">
-        <p>Nom élève : <span id="nom_eleve">—</span></p>
-        <p>Niveau : <span id="niveau_eleve">—</span></p>
-        <p>Total des points : <span id="total_points">0.00</span></p>
-        <p>Moyenne d'orientation : <span id="mo_value">0.00</span></p>
-    </div>
+    <!-- RÉSULTATS -->
+    <section class="resultats">
+        <div class="resultat-card">
+            <h3>📋 Résumé Élève</h3>
+            <div class="resultat-item">
+                <span class="label">Nom élève :</span>
+                <span id="nom_eleve" class="value">—</span>
+            </div>
+            <div class="resultat-item">
+                <span class="label">Niveau :</span>
+                <span id="niveau_eleve" class="value">—</span>
+            </div>
+            <div class="resultat-item">
+                <span class="label">Total des points :</span>
+                <span id="total_points" class="value highlight">0.00</span>
+            </div>
+            <div class="resultat-item highlight-row">
+                <span class="label">Moyenne d'Orientation :</span>
+                <span id="mo_value" class="value big">0.00</span>
+            </div>
+        </div>
+    </section>
 
     <!-- BOUTONS -->
     <section class="section-boutons">
         <div class="groupe-boutons">
-            <button id="calculer" class="bouton bouton-primaire">Calculer</button>
-            <button id="effacer" class="bouton bouton-secondaire">Effacer</button>
-            <button id="imprimer" class="bouton bouton-imprimer">Imprimer</button>
+            <button id="calculer" class="bouton bouton-primaire">
+                <span>✓ Calculer</span>
+            </button>
+            <button id="effacer" class="bouton bouton-secondaire">
+                <span>🔄 Effacer</span>
+            </button>
+            <button id="imprimer" class="bouton bouton-imprimer">
+                <span>🖨️ Imprimer</span>
+            </button>
         </div>
     </section>
 
+    <!-- ANNONCE BAS PAGE -->
+    <div id="ad-banner-bottom" class="ad-banner-bottom">
+        <button id="close-ad-bottom" class="ad-close-btn" aria-label="Fermer l'annonce">✕</button>
+        <div class="ad-content">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1014785724497316" data-ad-slot="1122334455" data-ad-format="horizontal"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
 </main>
 
-<!-- FEUX -->
+<!-- FEUX D'ARTIFICE (CÉLÉBRATION) -->
 <div id="fireworks" class="fireworks"></div>
 
-<!-- JS PRINCIPAL -->
-<script>
-(function(){
-    const table = document.querySelector('table');
-    const tbody = table.querySelector('tbody');
-
-    function enNombre(v){
-        const n = parseFloat(v);
-        return isNaN(n) ? 0 : Math.max(0, Math.min(20, n));
-    }
-
-    function moyenne(tab){
-        let total = 0, count = 0;
-        tab.forEach(v => {
-            if (!isNaN(v)){
-                total += v;
-                count++;
-            }
-        });
-        return count ? total / count : 0;
-    }
-
-    document.getElementById('calculer').onclick = () => {
-
-        let total = 0;
-        let coefTotal = 0;
-
-        tbody.querySelectorAll('tr:not(.ligne-total)').forEach(ligne => {
-
-            const inputs = ligne.querySelectorAll('input');
-
-            const t1 = enNombre(inputs[0]?.value);
-            const t2 = enNombre(inputs[1]?.value);
-            const t3 = enNombre(inputs[2]?.value);
-
-            const moy = moyenne([t1, t2, t3]);
-
-            let bepc = 0;
-
-            if (ligne.cells[5].querySelectorAll('input').length === 2){
-                const e = enNombre(ligne.cells[5].querySelectorAll('input')[0].value);
-                const o = enNombre(ligne.cells[5].querySelectorAll('input')[1].value);
-                bepc = moyenne([e, o]);
-            } else {
-                bepc = enNombre(inputs[3]?.value);
-            }
-
-            const combine = (moy + bepc) / 2;
-            const coef = parseFloat(ligne.cells[8].textContent);
-            const note = combine * coef;
-
-            ligne.cells[4].textContent = moy.toFixed(2);
-            ligne.cells[6].textContent = combine.toFixed(2);
-            ligne.cells[7].textContent = combine.toFixed(2);
-            ligne.cells[9].textContent = note.toFixed(2);
-
-            total += note;
-            coefTotal += coef;
-        });
-
-        const final = total / coefTotal;
-
-        document.getElementById('total_points').textContent = total.toFixed(2);
-        document.getElementById('mo_value').textContent = final.toFixed(2);
-        document.getElementById('moyenne_finale_table').textContent = final.toFixed(2);
-    };
-
-})();
-</script>
-
-<!-- Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1014785724497316"
-crossorigin="anonymous"></script>
+<!-- SCRIPT PRINCIPAL -->
+<script src="index.js"></script>
 
 </body>
 </html>
